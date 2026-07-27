@@ -233,10 +233,14 @@
   .mi-price { color: var(--maroon); font-weight: 700; font-size: 1.05rem; white-space: nowrap; padding-left: 6px; text-align: right; }
   .mi-price .sz { display: block; font-size: .78rem; font-weight: 400; color: var(--ink-soft); }
 
-  .meat-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(158px,1fr)); gap: 2px 18px; padding: 6px 20px 16px; list-style: none; }
-  .meat-grid li { padding: 5px 0; border-bottom: 1px dotted var(--parchment-edge); font-size: .9rem; }
-  .meat-grid b { color: var(--maroon); }
+  .meat-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(178px,1fr)); gap: 4px 18px; padding: 6px 20px 10px; list-style: none; }
+  .meat-grid li { padding: 6px 0; border-bottom: 1px dotted var(--parchment-edge); font-size: .9rem; display: flex; align-items: center; gap: 10px; }
+  .meat-grid img { width: 56px; height: 42px; object-fit: cover; flex: none; border: 2px solid #fff; box-shadow: 0 2px 6px rgba(59,42,23,.22); }
+  .meat-grid b { color: var(--maroon); display: block; line-height: 1.2; }
   .meat-grid span { color: var(--ink-soft); font-size: .82rem; }
+  .chicken-row { padding: 4px 20px 16px; font-size: .9rem; display: flex; gap: 10px 22px; flex-wrap: wrap; align-items: baseline; }
+  .chicken-row b { color: var(--maroon); }
+  .chicken-row span { color: var(--ink-soft); font-size: .82rem; }
   .size-row { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; background: var(--maroon); padding: 13px 16px; text-align: center; }
   .size-box { flex: 1 1 190px; color: #F7E7C1; }
   .size-box .sz-name { font-weight: 700; letter-spacing: 1px; text-transform: uppercase; font-size: .9rem; }
@@ -516,15 +520,18 @@
       <p class="cat-note" data-lang="vi">Chọn loại thịt — mỗi tô đều dọn kèm rau quế, giá tươi, ớt và chanh.</p>
       <p class="cat-note" data-lang="es">Elija sus carnes — cada tazón se sirve con albahaca, brotes de soya, jalapeño y limón.</p>
       <ul class="meat-grid">
-        <li><b>Tái</b> <span data-lang="en">Rare Beef</span><span data-lang="vi">Bò tái</span><span data-lang="es">Res poco cocida</span></li>
-        <li><b>Nạm</b> <span data-lang="en">Brisket</span><span data-lang="vi">Nạm bò</span><span data-lang="es">Falda de res</span></li>
-        <li><b>Gầu</b> <span data-lang="en">Crispy Fat</span><span data-lang="vi">Gầu bò</span><span data-lang="es">Pecho de res</span></li>
-        <li><b>Gân</b> <span data-lang="en">Tendon</span><span data-lang="vi">Gân bò</span><span data-lang="es">Tendón</span></li>
-        <li><b>Sách</b> <span data-lang="en">Tripe</span><span data-lang="vi">Sách bò</span><span data-lang="es">Tripa</span></li>
-        <li><b>Bò Viên</b> <span data-lang="en">Meatball</span><span data-lang="vi">Bò viên</span><span data-lang="es">Albóndiga</span></li>
-        <li><b>Phở Gà — Trắng</b> <span data-lang="en">Chicken, white meat</span><span data-lang="vi">Gà thịt trắng</span><span data-lang="es">Pollo, carne blanca</span></li>
-        <li><b>Phở Gà — Nâu</b> <span data-lang="en">Chicken, dark meat</span><span data-lang="vi">Gà thịt nâu</span><span data-lang="es">Pollo, carne oscura</span></li>
+        <li><img src="images/meat-tai.jpg" alt="Tái"><div><b>Tái</b><span data-lang="en">Rare Beef</span><span data-lang="vi">Bò tái</span><span data-lang="es">Res poco cocida</span></div></li>
+        <li><img src="images/meat-nam.jpg" alt="Nạm"><div><b>Nạm</b><span data-lang="en">Brisket</span><span data-lang="vi">Nạm bò</span><span data-lang="es">Falda de res</span></div></li>
+        <li><img src="images/meat-gau.jpg" alt="Gầu"><div><b>Gầu</b><span data-lang="en">Crispy Fat</span><span data-lang="vi">Gầu bò</span><span data-lang="es">Pecho de res</span></div></li>
+        <li><img src="images/meat-gan.jpg" alt="Gân"><div><b>Gân</b><span data-lang="en">Tendon</span><span data-lang="vi">Gân bò</span><span data-lang="es">Tendón</span></div></li>
+        <li><img src="images/meat-sach.jpg" alt="Sách"><div><b>Sách</b><span data-lang="en">Tripe</span><span data-lang="vi">Sách bò</span><span data-lang="es">Tripa</span></div></li>
+        <li><img src="images/meat-boivien.jpg" alt="Bò Viên"><div><b>Bò Viên</b><span data-lang="en">Meatball</span><span data-lang="vi">Bò viên</span><span data-lang="es">Albóndiga</span></div></li>
       </ul>
+      <div class="chicken-row">
+        <b>Phở Gà <span data-lang="en">(Chicken Pho)</span><span data-lang="vi">(Phở Gà)</span><span data-lang="es">(Phở de Pollo)</span> —</b>
+        <span><b>Trắng</b> <span data-lang="en">White Meat</span><span data-lang="vi">Thịt trắng</span><span data-lang="es">Carne blanca</span></span>
+        <span><b>Nâu</b> <span data-lang="en">Dark Meat</span><span data-lang="vi">Thịt nâu</span><span data-lang="es">Carne oscura</span></span>
+      </div>
       <ul class="items">
         <li class="mi">
           <img class="mi-thumb" src="images/pho-dacbiet.jpg" alt="Phở Đặc Biệt">
